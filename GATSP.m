@@ -2,14 +2,15 @@ clear all;
 clc;
 
 % Input Data
-data=load('G:\MSc\Thesis\data\new1\EUD2D\eil51.tsp');
+data=load(''); %file path 
 didx=[data(:,1)];
 data=[data(:,2) data(:,3)];
 [data_n,in_n] = size(data);
+%Distance Matrix
 [DM,FM]=DistM(data);
+
+
 nump=100; %number of population
-
-
 numex = 10; %number of experiment 
 tic;
 for k = 1: numex
